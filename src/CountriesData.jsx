@@ -21,6 +21,7 @@ function CountriesData() {
           region={country.name.official}
           official={country.flags.alt}
           key={country.name.common}
+          
         />
       );
     });
