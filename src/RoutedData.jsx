@@ -4,7 +4,6 @@ import { Navigate, useLocation,useNavigate } from 'react-router-dom';
 export default function RoutedData() {
     const {state} = useLocation()
     const { name, flag, alt, region, official, defaulty = "none" } = state || {};
-        // if(!state) return <div>data not fount</div>
 
         const back = useNavigate()
         const handleback = ()=>{
