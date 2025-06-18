@@ -1,21 +1,38 @@
 import React, { useEffect, useState } from "react";
 import CountriesData from "./CountriesData";
+import { useNavigate } from "react-router-dom";
 
 function SelectMenu({ country }) {
-  const [selected, setselected] = useState("");
 
+  const navigate = useNavigate()
+  
   const selectchange = (e) => {
-    setselected(e.target.value);
-  };
-  useEffect(() => {
+    const selected = e.target.value;
     console.log(selected);
-  }, [selected]);
+    const selectedcountry = country.find((c)=>
+    c.name.common===selected
+  )
+  if(selectedcountry){
+    navigate ('/countryinfo',{
+      state :{
+      name : selectedcountry.name.common,
+      flag : selectedcountry.flags.svg,
+      alt : selectedcountry.flags.alt ,
+      region : selectedcountry.name.official,
+      official : selectedcountry.flags.alt
+    }
+    })
+  };
+}
+  // useEffect(() => {
+  //   console.log(selected);
+  // }, [selected]);
   return (
     <>
-      <select className="filter" onChange={selectchange}>
+      <select className="filter" onChange={selectchange} >
         <option hidden="">Filter by Name</option>
-        {country.map((country) => (
-          <option key={country.name.common}>{country.name.common}</option>
+        {country.map((c) => (
+          <option key={c.name.common} value={c.name.common}>{c.name.common}</option>
         ))}
       </select>
     </>

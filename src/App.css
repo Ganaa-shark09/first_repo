@@ -233,3 +233,27 @@ i {
   margin: 20px;
   display: flex;
 }
+
+.Routedcard{
+  user-select: none;
+  height: 100%;
+  width: 100%;
+}
+
+.Routedcard img{
+  margin-top: 5%;
+  height: 70%;
+  width: 40%;
+  border-radius: 15px;
+}
+.Routedcard button{
+ margin-left: 45%;
+ border-radius: 20px;
+ background-color: #555;
+
+}
+.Routedcard .cardtext{
+  height: 40%;
+  width: 30%;
+  align-content: center;
+}

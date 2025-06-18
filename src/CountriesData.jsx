@@ -2,11 +2,13 @@ import React, { useEffect, useState } from "react";
 import CountryCard from "./CountryCard";
 import SelectMenu from "./SelectMenu";
 import SearchBar from "./SearchBar";
+import RoutedData from "./RoutedData";
 
 function CountriesData() {
   const [country, setcountry] = useState([]);
   const [loading, setloading] = useState(true);
   const [query, setquery] = useState("");
+  const [count, setcount] = useState('')
 
   const array = country
     .filter((country) =>
@@ -14,6 +16,7 @@ function CountriesData() {
     )
     .map((country) => {
       return (
+        <>
         <CountryCard
           name={country.name.common}
           flag={country.flags.svg}
@@ -21,8 +24,8 @@ function CountriesData() {
           region={country.name.official}
           official={country.flags.alt}
           key={country.name.common}
-          
         />
+        </>
       );
     });
 
@@ -36,7 +39,11 @@ function CountriesData() {
         });
     }, 1500);
     return () => clearTimeout(timer);
-  }, []);
+    console.log('jiiii');
+    
+  }, [count]);
+
+  
 
   return (
     <>
