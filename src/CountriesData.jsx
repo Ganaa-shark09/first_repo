@@ -39,7 +39,7 @@ function CountriesData() {
         });
     }, 1500);
     return () => clearTimeout(timer);
-    console.log('jiiii');
+    console.log('timeout cleared');
     
   }, [count]);
 

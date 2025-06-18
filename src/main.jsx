@@ -5,6 +5,8 @@ import './index.css'
 import App from './App.jsx'
 import RoutedData from './RoutedData.jsx'
 import CountriesData from './CountriesData.jsx'
+import Header from './Header.jsx'
+
 
 
 const router = createBrowserRouter([
@@ -22,6 +24,7 @@ const router = createBrowserRouter([
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
+    <Header />
     <RouterProvider router={router}/>
   </StrictMode>,
 )
