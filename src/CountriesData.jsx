@@ -8,7 +8,6 @@ function CountriesData() {
   const [country, setcountry] = useState([]);
   const [loading, setloading] = useState(true);
   const [query, setquery] = useState("");
-  const [count, setcount] = useState('')
 
   const array = country
     .filter((country) =>
@@ -39,9 +38,9 @@ function CountriesData() {
         });
     }, 1500);
     return () => clearTimeout(timer);
-    console.log('timeout cleared');
+    console.log('clearing time-out');
     
-  }, [count]);
+  }, []);
 
   
 

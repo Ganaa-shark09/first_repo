@@ -6,13 +6,16 @@ import App from './App.jsx'
 import RoutedData from './RoutedData.jsx'
 import CountriesData from './CountriesData.jsx'
 import Header from './Header.jsx'
+import CountryCard from './CountryCard.jsx'
+import Errorpage from './Errorpage.jsx'
 
 
 
 const router = createBrowserRouter([
   {
     path:'/',
-    element: <App />
+    element: <App />,
+    errorElement: <Errorpage/>
   },
   {
     path:'/countryinfo',
