@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import CountryCard from "./CountryCard";
 import SelectMenu from "./SelectMenu";
 import SearchBar from "./SearchBar";
-import RoutedData from "./RoutedData";
 
 function CountriesData() {
   const [country, setcountry] = useState([]);

@@ -1,10 +1,7 @@
-import React, { useState } from "react";
-import {useNavigate} from 'react-router-dom'
+  import {useNavigate} from 'react-router-dom'
 
 export default function CountryCard(props) {
   const { name, flag, alt, region, official, defaulty = "none" } = props;
-  // console.log(props);
-  const [classActive, setclassActive] = useState(false)
   const navigate = useNavigate()  
 
   const handleclick = ()=>{

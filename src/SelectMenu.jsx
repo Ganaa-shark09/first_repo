@@ -1,5 +1,4 @@
-import React, { useEffect, useState } from "react";
-import CountriesData from "./CountriesData";
+import React from "react";
 import { useNavigate } from "react-router-dom";
 
 function SelectMenu({ country }) {
@@ -24,9 +23,6 @@ function SelectMenu({ country }) {
     })
   };
 }
-  // useEffect(() => {
-  //   console.log(selected);
-  // }, [selected]);
   return (
     <>
       <select className="filter" onChange={selectchange} >
