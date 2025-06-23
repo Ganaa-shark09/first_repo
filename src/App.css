@@ -241,16 +241,19 @@ i {
 }
 
 .Routedcard img{
-  margin-top: 5%;
+  margin-top: 1%;
   height: 70%;
   width: 40%;
   border-radius: 15px;
+
 }
 .Routedcard button{
  margin-left: 45%;
  border-radius: 20px;
  background-color: #555;
-
+ width: 10%;
+ padding: 1%;
+ position: sticky;
 }
 .Routedcard .cardtext{
   height: 40%;

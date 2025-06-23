@@ -32,7 +32,7 @@ export default function RoutedData() {
               {official || defaulty}
             </p>
           </div>
-          <button onClick={handleback} ><h1>Back</h1></button>
+          <button onClick={handleback} > Back </button>
         </div>
     </>
   )
